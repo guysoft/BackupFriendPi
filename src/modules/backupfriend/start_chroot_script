@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# <Script Name>
+# <Description what this module does>
+# Written by <Author>
+# GPL V3
+########
+
+
+# Source error handling, leave this in place
+set -x
+set -e
+
+source /common.sh
+install_cleanup_trap
+
+unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
+unpack /filesystem/home/root /root root
+unpack /filesystem/boot /boot
+
+pushd /boot/docker-compose/02_backupfriend
+    wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/docker-compose.yml
+    wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/rdw.conf
+    wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/.env
+popd
+
+systemctl enable backupfriend-startup.service
+
+# Unpack root at the end, so files are modified before
+unpack /filesystem/root /

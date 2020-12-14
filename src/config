@@ -1,0 +1,6 @@
+export DIST_NAME=BackupFriend
+export DIST_VERSION=0.1.0
+
+export MODULES="base(network,disable-services(docker, backupfriend, auto-mount-removable, usage-statistics))"
+
+export USAGE_STATISTICS_URL=https://backupfriend-tracking.gnethomelinux.com
