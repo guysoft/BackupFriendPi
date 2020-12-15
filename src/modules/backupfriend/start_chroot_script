@@ -17,6 +17,7 @@ unpack /filesystem/home/pi /home/"${BASE_USER}" "${BASE_USER}"
 unpack /filesystem/home/root /root root
 unpack /filesystem/boot /boot
 
+mkdir -p /boot/docker-compose/02_backupfriend
 pushd /boot/docker-compose/02_backupfriend
     wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/docker-compose.yml
     wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/rdw.conf
