@@ -24,7 +24,8 @@ pushd /boot/docker-compose/02_backupfriend
     wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/.env
 popd
 
-systemctl enable backupfriend-startup.service
-
 # Unpack root at the end, so files are modified before
 unpack /filesystem/root /
+
+systemctl enable backupfriend-startup.service
+
