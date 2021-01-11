@@ -18,6 +18,9 @@ How to use it?
 
     TBD WORK IN PROGRESS
 
+#. rdiffweb instance is at port 8082: http://backupfriend.local:8082
+#. ssh to sync rdiff-backup is at port at 8022: http://backupfriend.local:8022
+
 #. Boot the Pi from the SD card
 #. Hostname is ``pleromapi`` (not ``raspberrypi`` as usual), username: ``pi`` and inital password is: ``raspberry``
 #. After a few mintues you should be able to access ``http://backupfriend.local/`` or ``http://backupfriend.lan/``
