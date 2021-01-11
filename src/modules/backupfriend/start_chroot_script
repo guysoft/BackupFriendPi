@@ -27,5 +27,9 @@ popd
 # Unpack root at the end, so files are modified before
 unpack /filesystem/root /
 
+# Make an empty file so when we start the container it does not create a folder
+touch /home/pi/.ssh/authorized_keys
+chown 600 "${BASE_USER}:${BASE_USER}" /home/pi/.ssh/authorized_keys
+
 systemctl enable backupfriend-startup.service
 
