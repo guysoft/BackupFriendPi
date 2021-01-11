@@ -1,7 +1,7 @@
 BackupFriendPi
 ==============
 
-An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro that runs `BackupFriend <https://pleroma.social/>`_ using Docker and Nginx-proxy as a reverse proxy, with letsencrypt.
+An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro that runs `BackupFriend <https://github.com/guysoft/BackupFriend-docker>`_ using Docker and Nginx-proxy as a reverse proxy, with letsencrypt.
 BackupFriend lets you put a Raspberry Pi in your friend and family, or anywhere else, and backup your files with history, and then access them over a web service, or by physically taking the drive back.
 
 Where to get it?
