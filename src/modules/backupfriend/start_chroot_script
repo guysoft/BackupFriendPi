@@ -28,8 +28,12 @@ popd
 unpack /filesystem/root /
 
 # Make an empty file so when we start the container it does not create a folder
+mkdir -p /home/pi/.ssh
 touch /home/pi/.ssh/authorized_keys
-chown 600 "${BASE_USER}:${BASE_USER}" /home/pi/.ssh/authorized_keys
+chmod 600 /home/pi/.ssh/authorized_keys
+chown "${BASE_USER}:${BASE_USER}" /home/pi/.ssh/authorized_keys
+chown "${BASE_USER}:${BASE_USER}" /home/pi/.ssh
+
 
 systemctl enable backupfriend-startup.service
 
