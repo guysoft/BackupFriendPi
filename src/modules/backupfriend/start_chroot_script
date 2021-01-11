@@ -34,6 +34,10 @@ chmod 600 /home/pi/.ssh/authorized_keys
 chown "${BASE_USER}:${BASE_USER}" /home/pi/.ssh/authorized_keys
 chown "${BASE_USER}:${BASE_USER}" /home/pi/.ssh
 
+# Make backup folder
+mkdir /backup
+chmod 777 /backup
+
 
 systemctl enable backupfriend-startup.service
 
