@@ -22,9 +22,9 @@ How to use it?
 #. ssh to sync rdiff-backup is at port at 8022: http://backupfriend.local:8022
 
 #. Boot the Pi from the SD card
-#. Hostname is ``pleromapi`` (not ``raspberrypi`` as usual), username: ``pi`` and inital password is: ``raspberry``
+#. Hostname is ``backupfriend`` (not ``raspberrypi`` as usual), username: ``pi`` and inital password is: ``raspberry``
 #. After a few mintues you should be able to access ``http://backupfriend.local/`` or ``http://backupfriend.lan/``
-#. You can change the settings of the Pleroma/nginx-proxy stack in the files located at ``/boot/docker-compose/backupfriend/`` and ``/boot/docker-compose/01_nginx-proxy/``.
+#. You can change the settings of the Backupfriend/nginx-proxy stack in the files located at ``/boot/docker-compose/backupfriend/`` and ``/boot/docker-compose/01_nginx-proxy/``.
 
 
 Requirements
@@ -36,8 +36,8 @@ Requirements
 Features
 --------
 
-* Pleroma Pre-installed using docker
-* Nginx-proxy to manage reverse proxy and certificates
+* `Backupfriend-docker <https://github.com/guysoft/BackupFriend-docker>`_ Pre-installed using docker
+* Nginx-proxy to manage reverse proxy and certificates if you have a domain to set up (optional, but recommended)
 
 
 Developing
@@ -61,12 +61,12 @@ Build requires about 4.5 GB of free space available.
 You can build it assuming you already have docker and docker-compose installed issuing the following commands::
 
     
-    git clone https://github.com/guysoft/PleromaPi.git
-    cd PleromaPi/src/image
+    git clone https://github.com/guysoft/BackupFriendPi.git
+    cd BackupFriendPi/src/image
     wget -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf_latest'
     cd ..
     sudo docker-compose up -d
-    sudo docker exec -it pleromapi-build build
+    sudo docker exec -it backupfriendpi-build build
     
 Building BackupFriendPi Variants
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
