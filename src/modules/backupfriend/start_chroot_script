@@ -44,6 +44,8 @@ chown "${BASE_USER}:${BASE_USER}" /etc/authorized_keys
 mkdir /backup
 chmod 777 /backup
 
+# Link the auto-mount usb folder to the backups folder
+ln -s /media /backup/media
 
 systemctl enable backupfriend-startup.service
 
