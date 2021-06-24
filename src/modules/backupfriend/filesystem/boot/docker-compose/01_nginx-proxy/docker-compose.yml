@@ -7,8 +7,8 @@ services:
     tty: true
     # entrypoint: /bin/bash
     ports:
-      - "0.0.0.0:80:80"
-      - "0.0.0.0:443:443"
+      - "80:80"
+      - "443:443"
     volumes:
       - conf:/etc/nginx/conf.d
       - vhost:/etc/nginx/vhost.d
@@ -19,7 +19,7 @@ services:
     restart: always
 
   dockergen:
-    image: btcpayserver/docker-gen:0.7.6
+    image: nginxproxy/docker-gen
     container_name: nginx-proxy-gen
     depends_on:
       - nginx
@@ -32,9 +32,11 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl:ro
     restart: always
+    environment:
+      - ENABLE_IPV6=true
 
   letsencrypt:
-    image: duch/letsencrypt-nginx-proxy-companion:stable
+    image: nginxproxy/acme-companion
     container_name: nginx-proxy-le
     depends_on:
       - nginx
