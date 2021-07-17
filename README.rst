@@ -14,18 +14,18 @@ How to use it?
 
 #. Unzip the image and install it to an SD card `like any other Raspberry Pi image <https://www.raspberrypi.org/documentation/installation/installing-images/README.md>`_
 #. Configure your WiFi by editing ``backupfriendpi-wpa-supplicant.txt`` at the root of the flashed card when using it like a flash drive
-#. Configure the BackFriend settings at ``/boot/docker-compose/02_backupfriend/docker-compose.yml`` and set::
 
-    TBD WORK IN PROGRESS
-
-#. rdiffweb instance is at port 8082: http://backupfriend.local:8082
-#. ssh to sync rdiff-backup is at port at 8022: http://backupfriend.local:8022
-
+#. ssh to sync rdiff-backup is at port at 8022: http://backupfriend:8022
 #. Boot the Pi from the SD card
 #. Hostname is ``backupfriend`` (not ``raspberrypi`` as usual), username: ``pi`` and inital password is: ``raspberry``
-#. After a few mintues you should be able to access ``http://backupfriend.local/`` or ``http://backupfriend.lan/``
-#. You can change the settings of the Backupfriend/nginx-proxy stack in the files located at ``/boot/docker-compose/backupfriend/`` and ``/boot/docker-compose/01_nginx-proxy/``.
+#. After a few mintues you should be able to access `http://backupfriend/ <http://backupfriend/>`_ or `http://backupfriend.local <http://backupfriend.local/>`_.
+#. Default password for the Web UI is ``admin`` password ``admin123``.
 
+Configuretion notes
+-------------------
+* Configure the BackFriend server settings are at ``/boot/docker-compose/02_backupfriend/docker-compose.yml``
+* rdiffweb instance also avilable port 8082: http://backupfriend:8082
+* You can change the settings of the Backupfriend/nginx-proxy stack in the files located at ``/boot/docker-compose/backupfriend/`` and ``/boot/docker-compose/01_nginx-proxy/``.
 
 Requirements
 ------------
