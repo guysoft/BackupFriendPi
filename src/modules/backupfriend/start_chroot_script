@@ -21,7 +21,8 @@ mkdir -p /boot/docker-compose/02_backupfriend
 pushd /boot/docker-compose/02_backupfriend
     wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/docker-compose.yml
     wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/rdw.conf
-    wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/.env
+    wget https://raw.githubusercontent.com/guysoft/BackupFriend-docker/master/src/env_raspberrypi
+    mv env_raspberrypi .env
 popd
 
 # Make an empty db file
