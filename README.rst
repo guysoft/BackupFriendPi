@@ -21,7 +21,7 @@ How to use it?
 #. After a few mintues you should be able to access `http://backupfriend/ <http://backupfriend/>`_ or `http://backupfriend.local <http://backupfriend.local/>`_.
 #. Default password for the Web UI is ``admin`` password ``admin123``.
 
-Configuretion notes
+Configuration notes
 -------------------
 * Configure the BackFriend server settings are at ``/boot/docker-compose/02_backupfriend/docker-compose.yml``
 * rdiffweb instance also avilable port 8082: http://backupfriend:8082
